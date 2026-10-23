@@ -13,7 +13,7 @@ class MaListeScreen extends StatefulWidget {
 
 class _MaListeScreenState extends State<MaListeScreen> {
   bool _nouveautesSeulement = false;
-  Map<String, bool> _genres = {
+  final Map<String, bool> _genres = {
     'Roman': true,
     'Science': true,
     'Histoire': true,
@@ -69,7 +69,7 @@ class _MaListeScreenState extends State<MaListeScreen> {
       body: Column(
         children: [
           CheckboxListTile(
-            title: const Text('Afficher uniquement les nouveautÃ©s'),
+            title: const Text('Afficher uniquement les nouveautés'),
             value: _nouveautesSeulement,
             onChanged: (v) => setState(() => _nouveautesSeulement = v ?? false),
           ),
@@ -95,7 +95,7 @@ class _MaListeScreenState extends State<MaListeScreen> {
           ),
           Expanded(
             child: affiches.isEmpty
-                ? const Center(child: Text('Aucun livre Ã  afficher'))
+                ? const Center(child: Text('Aucun livre à afficher'))
                 : ListView.separated(
                     itemCount: affiches.length,
                     separatorBuilder: (c, i) => const Divider(),
@@ -116,7 +116,7 @@ class _MaListeScreenState extends State<MaListeScreen> {
                               ? const TextStyle(decoration: TextDecoration.lineThrough)
                               : null,
                         ),
-                        subtitle: Text('${l.auteur} â€“ ${l.annee}'),
+                        subtitle: Text('${l.auteur} – ${l.annee}'),
                         value: l.lu,
                         onChanged: (v) async {
                           setState(() => l.lu = v ?? false);
