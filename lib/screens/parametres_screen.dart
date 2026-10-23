@@ -6,7 +6,8 @@ class ParametresScreen extends StatefulWidget {
   final List<Livre> livres;
   final VoidCallback onReset;
 
-  const ParametresScreen({super.key, required this.livres, required this.onReset});
+  const ParametresScreen(
+      {super.key, required this.livres, required this.onReset});
 
   @override
   State<ParametresScreen> createState() => _ParametresScreenState();
@@ -39,26 +40,29 @@ class _ParametresScreenState extends State<ParametresScreen> {
               tileColor: Colors.blue.shade50,
               iconColor: Colors.blue,
               textColor: Colors.black87,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12)),
             ),
-            ListTile(
-              leading: const Icon(Icons.language),
-              title: const Text('Langue'),
-              subtitle: const Text('Français'),
+            const ListTile(
+              leading: Icon(Icons.language),
+              title: Text('Langue'),
+              subtitle: Text('Français'),
             ),
-            ListTile(
+            const ListTile(
               // dense reduit la hauteur, isThreeLine permet 3 lignes, enabled false desactive le tile
               dense: true,
               isThreeLine: true,
               enabled: false,
-              leading: const Icon(Icons.info),
-              title: const Text('À propos'),
-              subtitle: const Text('MaBiblio v1.0\nApplication de gestion de bibliothèque'),
+              leading: Icon(Icons.info),
+              title: Text('À propos'),
+              subtitle:
+                  Text('MaBiblio v1.0\nApplication de gestion de bibliothèque'),
             ),
             ListTile(
               leading: const Icon(Icons.restart_alt),
               title: const Text('Réinitialiser ma bibliothèque'),
-              subtitle: const Text('Efface les lectures et favoris sauvegardés'),
+              subtitle:
+                  const Text('Efface les lectures et favoris sauvegardés'),
               onTap: () async {
                 final confirm = await showDialog<bool>(
                   context: context,
@@ -84,7 +88,8 @@ class _ParametresScreenState extends State<ParametresScreen> {
                   widget.onReset();
                   if (context.mounted) {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Bibliothèque réinitialisée')),
+                      const SnackBar(
+                          content: Text('Bibliothèque réinitialisée')),
                     );
                     Navigator.pop(context);
                   }
