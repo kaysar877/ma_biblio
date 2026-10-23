@@ -1,16 +1,21 @@
-# ma_biblio
+# MaBiblio
 
-A new Flutter project.
+Application Flutter de gestion de bibliothèque (listes et grilles).
 
-## Getting Started
+## Fonctionnalités
+- Catalogue avec nouveautés horizontales et liste verticale.
+- Galerie en grille responsive avec tri par note.
+- Ma liste avec filtres par nouveauté et genre (checkbox tristate).
+- Détail d'un livre avec favori et lecture.
+- Paramètres avec réinitialisation de la bibliothèque.
+- Persistance locale en JSON.
 
-This project is a starting point for a Flutter application.
+## Installation
+1. Installer Flutter.
+2. `flutter pub get`
+3. `flutter run`
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Captures d'écran
+- (ajouter des captures ici)
+" filePath">
+C:\Users\DELL\Desktop\tp application mobile\ma_biblio\README.md
